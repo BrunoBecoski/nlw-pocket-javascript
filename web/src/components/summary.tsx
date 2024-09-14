@@ -4,12 +4,12 @@ import { CheckCircle2, Plus } from 'lucide-react'
 import ptBR from 'dayjs/locale/pt-br'
 
 import { getSummary } from '../http/get-summary'
+import { PendingGoals } from './pending-goals'
 import { Button } from './ui/button'
 import { DialogTrigger } from './ui/dialog'
 import { InOrbitIcon } from './in-orbit-icon'
 import { Progress, ProgressIndicator } from './ui/progress-bar'
 import { Separator } from './ui/separator'
-import { OutlineButton } from './ui/outline-button'
 
 dayjs.locale(ptBR)
 
@@ -62,27 +62,7 @@ export function Summary() {
 
       <Separator />
 
-      <div className="flex gap-3 flex-wrap">
-        <OutlineButton>
-          <Plus className="size-4 text-zinc-600" />
-          Meditar
-        </OutlineButton>
-
-        <OutlineButton>
-          <Plus className="size-4 text-zinc-600" />
-          Nadar
-        </OutlineButton>
-
-        <OutlineButton>
-          <Plus className="size-4 text-zinc-600" />
-          Praticar exercícios
-        </OutlineButton>
-
-        <OutlineButton>
-          <Plus className="size-4 text-zinc-600" />
-          Me alimentar bem
-        </OutlineButton>
-      </div>
+      <PendingGoals />
 
       <div className="flex flex-col gap-6">
         <h2 className="text-xl font-medium">Sua semana</h2>
