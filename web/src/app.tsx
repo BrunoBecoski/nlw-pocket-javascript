@@ -9,7 +9,8 @@ import { CreateGoal } from './components/create-goal'
 export function App() {
   const { data } = useQuery({
 		queryKey: ['get-summary'],
-		queryFn: getSummary
+		queryFn: getSummary,
+		staleTime: 1000 * 60 // 60 seconds
 	})
 
 	return (
